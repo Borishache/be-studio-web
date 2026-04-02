@@ -1,8 +1,9 @@
 import React from 'react';
 import './WorkSection.css';
+import modaImg from '../assets/work/moda.jpg';
 
 const works = [
-  { id: 1, title: 'Campaña Moda', category: 'Social Media', img: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=500&q=80' },
+  { id: 1, title: 'Campaña Moda', category: 'Social Media', img: modaImg },
   { id: 2, title: 'App Fintech', category: 'UX/UI Design', img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80' },
   { id: 3, title: 'Rebranding Café', category: 'Identidad Visual', img: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=500&q=80' },
   { id: 4, title: 'Lanzamiento Tech', category: 'Estrategia Digital', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80' }
