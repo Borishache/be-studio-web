@@ -22,14 +22,18 @@
 :root {
   --blue: #0046fd;
   --orange: #ff6826;
-  --white: #ffffff;
-  --dark-bg: #090a0f;
-  --dark-card: #13161c;
-  --gray-text: #adb5bd;
+  --dark-blue: #011bb7;
+  --lime: #bff532;
+  --white: #e8e8e8;
+  --black: #000000;
+  
+  --dark-bg: var(--black);
+  --dark-card: var(--dark-blue);
+  --gray-text: #b0c4de;
   
   --font-main: 'Galano Grotesque', sans-serif;
-  --glass-bg: rgba(19, 22, 28, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-bg: rgba(1, 27, 183, 0.15);
+  --glass-border: rgba(232, 232, 232, 0.1);
 }
 
 * {
@@ -94,6 +98,10 @@ p {
 
 .text-blue {
   color: var(--blue);
+}
+
+.text-lime {
+  color: var(--lime);
 }
 
 .glass-panel {

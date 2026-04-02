@@ -1,13 +1,15 @@
 import React from 'react';
 import { FaInstagram, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
+import logo from '../assets/logo.png';
+import logoAlt from '../assets/logo-alt.png';
 
 export default function Footer() {
   return (
     <footer className="footer section-padding">
       <div className="container footer-container">
         <div className="footer-brand">
-          <img src="/be_studio_Logo-02.png" alt="Be. studio Logo" className="footer-logo" onError={(e)=>{e.target.onerror = null; e.target.src="/be_studio_Reduccion-04.png"}} />
+          <img src={logo} alt="Be. studio Logo" className="footer-logo" onError={(e)=>{e.target.onerror = null; e.target.src=logoAlt}} />
           <p>Potenciando marcas con estrategias disruptivas, diseño premium y experiencias únicas. Únete al siguiente nivel del marketing.</p>
         </div>
         <div className="footer-socials">

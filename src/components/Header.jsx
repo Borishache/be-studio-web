@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './Header.css';
 import Button from './Button';
 
+import logo from '../assets/logo.png';
+import logoAlt from '../assets/logo-alt.png';
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -17,7 +20,7 @@ export default function Header() {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
         <div className="logo">
-          <img src="/be_studio_Logo-02.png" alt="Be. studio Logo" onError={(e)=>{e.target.onerror = null; e.target.src="/be_studio_Reduccion-04.png"}} />
+          <img src={logo} alt="Be. studio Logo" onError={(e)=>{e.target.onerror = null; e.target.src=logoAlt}} />
         </div>
         <nav className="nav-links">
           <a href="#servicios">Servicios</a>
