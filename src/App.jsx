@@ -6,10 +6,12 @@ import ServicesSection from './sections/ServicesSection'
 import AiSection from './sections/AiSection'
 import WorkSection from './sections/WorkSection'
 import ContactSection from './sections/ContactSection'
+import DynamicBackground from './components/DynamicBackground'
 
 function App() {
   return (
     <div className="app-wrapper">
+      <DynamicBackground />
       <Header />
       <main>
         <HeroSection />
