@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../components/Button';
+import TypingBanner from '../components/TypingBanner';
 import './HeroSection.css';
 
 export default function HeroSection() {
@@ -10,6 +11,7 @@ export default function HeroSection() {
           <h1 className="hero-title">
             Eleva tu marca al <span className="text-orange">siguiente nivel.</span>
           </h1>
+          <TypingBanner />
           <p className="hero-subtitle delay-100">
             Somos Be. studio. Combinamos estrategias impactantes, diseño de primer nivel y la psicología del consumidor para crear resultados reales que enamoran.
           </p>
