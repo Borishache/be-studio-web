@@ -2,12 +2,13 @@ import React from 'react';
 import './WorkSection.css';
 import modaImg from '../assets/work/moda.jpg';
 import rebrandingImg from '../assets/work/rebranding.png';
+import engagementImg from '../assets/work/engagement.png';
 
 const works = [
   { id: 1, title: 'Campaña Moda', category: 'Social Media', img: modaImg },
   { id: 2, title: 'App Fintech', category: 'UX/UI Design', img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80' },
   { id: 3, title: 'Rebranding Doggery', category: 'Identidad Visual', img: rebrandingImg },
-  { id: 4, title: 'Lanzamiento Tech', category: 'Estrategia Digital', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80' }
+  { id: 4, title: 'Incremento en Engagement', category: 'Estrategia Digital', img: engagementImg }
 ];
 
 export default function WorkSection() {
