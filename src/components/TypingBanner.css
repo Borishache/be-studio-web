@@ -22,7 +22,7 @@
 }
 
 .typing-logo {
-  height: 55px;
+  height: 90px;
   object-fit: contain;
 }
 
@@ -55,7 +55,7 @@
 }
 
 @media (max-width: 768px) {
-  .typing-logo { height: 35px; }
+  .typing-logo { height: 55px; }
   .typing-text-container { min-width: 180px; }
   .typing-text, .cursor { font-size: 2rem; }
   .typing-banner-wrapper { padding: 1rem 0; margin-top: 1.5rem; margin-bottom: 1.5rem; }
