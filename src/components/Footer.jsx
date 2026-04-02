@@ -15,13 +15,13 @@ export default function Footer() {
         <div className="footer-socials">
           <h3>Síguenos</h3>
           <div className="social-links">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://www.instagram.com/bepuntostudio/" target="_blank" rel="noreferrer" className="social-icon">
               <FaInstagram />
             </a>
-            <a href="https://tiktok.com" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://www.tiktok.com/@bepuntostudio" target="_blank" rel="noreferrer" className="social-icon">
               <FaTiktok />
             </a>
-            <a href="https://wa.me/123456789" target="_blank" rel="noreferrer" className="social-icon whatsapp">
+            <a href="https://wa.me/c/573232531798" target="_blank" rel="noreferrer" className="social-icon whatsapp">
               <FaWhatsapp />
             </a>
           </div>
