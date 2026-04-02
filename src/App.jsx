@@ -9,9 +9,6 @@ import ContactSection from './sections/ContactSection'
 function App() {
   return (
     <div className="app-wrapper">
-      <div className="bg-glow bg-glow-blue"></div>
-      <div className="bg-glow bg-glow-orange"></div>
-      
       <Header />
       <main>
         <HeroSection />

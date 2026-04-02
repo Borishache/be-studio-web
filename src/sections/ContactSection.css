@@ -11,6 +11,10 @@
 
 .contact-form {
   padding: 3rem;
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
 }
 
 .form-group {
@@ -28,10 +32,10 @@
 .form-group textarea {
   width: 100%;
   padding: 1.2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--glass-border);
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.2);
   border-radius: 12px;
-  color: var(--white);
+  color: var(--black);
   font-family: inherit;
   transition: all 0.3s ease;
   font-size: 1rem;
@@ -40,9 +44,9 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--blue);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 10px rgba(0, 70, 253, 0.2);
+  border-color: var(--orange);
+  background: var(--white);
+  box-shadow: 0 0 10px rgba(255, 104, 38, 0.2);
 }
 
 .w-full {

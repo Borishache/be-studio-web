@@ -13,7 +13,7 @@ export default function WorkSection() {
     <section className="work section-padding" id="trabajos">
       <div className="container">
         <div className="section-header text-center">
-          <h2><span className="text-blue">Nuestros</span> Trabajos</h2>
+          <h2><span className="text-orange">Nuestros</span> Trabajos</h2>
           <p>Explora algunos de los proyectos más recientes donde llevamos marcas al próximo nivel.</p>
         </div>
         <div className="work-grid">

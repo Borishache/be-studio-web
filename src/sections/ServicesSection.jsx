@@ -35,8 +35,8 @@ export default function ServicesSection() {
         </div>
         <div className="services-grid">
           {services.map((svc, idx) => (
-            <div key={idx} className="service-card glass-panel">
-              <div className="service-icon text-blue">
+            <div key={idx} className="service-card">
+              <div className="service-icon text-orange">
                 {svc.icon}
               </div>
               <h3>{svc.title}</h3>

@@ -16,23 +16,26 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--blue), var(--orange));
+  background: var(--orange);
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(0, 70, 253, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 104, 38, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 104, 38, 0.4);
+  background: var(--lime);
+  color: var(--black);
+  box-shadow: 0 6px 20px rgba(191, 245, 50, 0.4);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--white);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: var(--black);
+  border: 2px solid var(--black);
 }
 
 .btn-outline:hover {
-  border-color: var(--white);
-  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--orange);
+  color: var(--orange);
+  background: transparent;
 }

@@ -24,16 +24,17 @@
   --orange: #ff6826;
   --dark-blue: #011bb7;
   --lime: #bff532;
-  --white: #e8e8e8;
+  --white: #ffffff;
   --black: #000000;
+  --mid-gray: #e8e8e8;
   
-  --dark-bg: var(--black);
-  --dark-card: var(--dark-blue);
-  --gray-text: #b0c4de;
+  --dark-bg: var(--white);
+  --dark-card: var(--white);
+  --gray-text: #4a4a4b;
   
   --font-main: 'Galano Grotesque', sans-serif;
-  --glass-bg: rgba(1, 27, 183, 0.15);
-  --glass-border: rgba(232, 232, 232, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -49,7 +50,7 @@ html {
 body {
   font-family: var(--font-main);
   background-color: var(--dark-bg);
-  color: var(--white);
+  color: var(--black);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;

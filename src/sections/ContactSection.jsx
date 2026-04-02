@@ -10,7 +10,7 @@ export default function ContactSection() {
           <h2>¿Listo para <span className="text-gradient">conectar?</span></h2>
           <p>Déjanos un mensaje o presiona el botón de WhatsApp para charlar directamente y descubrir cómo podemos hacer crecer tu negocio.</p>
         </div>
-        <div className="contact-form glass-panel">
+        <div className="contact-form">
           <form onSubmit={(e) => e.preventDefault()}>
             <div className="form-group">
               <label htmlFor="name">Nombre</label>

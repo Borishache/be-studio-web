@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--dark-card);
-  border-top: 1px solid var(--glass-border);
+  background-color: var(--mid-gray);
+  border-top: 1px solid rgba(0,0,0,0.05);
   padding-bottom: 2rem;
 }
 
@@ -14,7 +14,6 @@
 .footer-logo {
   height: 50px;
   margin-bottom: 1.5rem;
-  opacity: 0.8;
 }
 
 .footer-brand p {
@@ -38,17 +37,18 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.1);
   font-size: 1.5rem;
+  color: var(--black);
   transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-  background: var(--blue);
-  color: var(--white);
+  background: var(--lime);
+  color: var(--black);
   transform: translateY(-5px);
-  border-color: var(--blue);
+  border-color: var(--lime);
 }
 
 .social-icon.whatsapp:hover {

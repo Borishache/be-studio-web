@@ -8,11 +8,11 @@
 }
 
 .header.scrolled {
-  background: rgba(9, 10, 15, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
@@ -33,8 +33,8 @@
 }
 
 .nav-links a {
-  font-weight: 500;
-  color: var(--white);
+  font-weight: 600;
+  color: var(--black);
   opacity: 0.8;
   position: relative;
 }
