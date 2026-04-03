@@ -1,8 +1,9 @@
 .hero {
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
 .hero-container {
@@ -26,7 +27,7 @@
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   color: var(--gray-text);
   max-width: 650px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
   line-height: 1.7;
 }
 
