@@ -1,0 +1,125 @@
+.social-counter-container {
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.social-ui-mockup {
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.social-header-ui {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  padding-bottom: 1rem;
+}
+
+.social-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--orange), var(--blue));
+}
+
+.social-user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.social-name {
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.social-location {
+  font-size: 0.75rem;
+  color: var(--gray-text);
+}
+
+.social-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.metric-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metric-row.highlight {
+  background: rgba(255, 104, 38, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0 -1rem;
+}
+
+.metric-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.metric-value {
+  font-weight: 800;
+  font-size: 1.6rem;
+  line-height: 1;
+  font-feature-settings: "tnum"; 
+  font-variant-numeric: tabular-nums; /* Prevents text jitter when numbers change */
+}
+
+.metric-label {
+  font-size: 0.7rem;
+  color: var(--gray-text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.3rem;
+  font-weight: 600;
+}
+
+.metric-trend {
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.heart-icon {
+  font-size: 1.5rem;
+}
+
+.icon-anim {
+  animation: pulseBeat 0.8s infinite alternate;
+}
+
+@keyframes pulseBeat {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+
+@media (max-width: 480px) {
+  .metric-value { font-size: 1.3rem; }
+  .social-ui-mockup { padding: 1rem; }
+  .social-header-ui { margin-bottom: 1.5rem; }
+}
