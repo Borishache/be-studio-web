@@ -1,17 +1,21 @@
 .typing-banner-wrapper {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   padding: 1.5rem 0;
-  border-top: 1px solid rgba(0,0,0,0.03);
+  border-top: 1px solid rgba(255,255,255,1);
   border-bottom: 1px solid rgba(0,0,0,0.03);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.04);
   overflow: hidden;
+  position: relative;
+  z-index: 10;
 }
 
 .typing-banner-content {
