@@ -13,29 +13,35 @@ const wordsData = [
 export default function ScrollPhraseSection() {
   const sectionRef = useRef(null);
   const [progress, setProgress] = useState(0);
+  const rafRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      const sectionCenter = rect.top + rect.height / 2;
-      const viewportCenter = windowHeight / 2;
-      
-      // How many pixels past the center of the viewport
-      let delta = viewportCenter - sectionCenter;
-      
-      if (delta < 0) delta = 0; // Don't explode before reaching center
-      
-      // Math to normalize explosion impact
-      const explosionAmount = Math.min(Math.max(delta / 300, 0), 1.5);
-      setProgress(explosionAmount);
+      if (rafRef.current) return;
+      rafRef.current = requestAnimationFrame(() => {
+        if (!sectionRef.current) { rafRef.current = null; return; }
+        const rect = sectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        const sectionCenter = rect.top + rect.height / 2;
+        const viewportCenter = windowHeight / 2;
+        
+        let delta = viewportCenter - sectionCenter;
+        if (delta < 0) delta = 0;
+        
+        // Capped at 1.0 to prevent words from overflowing into other sections
+        const explosionAmount = Math.min(Math.max(delta / 400, 0), 1.0);
+        setProgress(explosionAmount);
+        rafRef.current = null;
+      });
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, []);
 
   return (
@@ -47,8 +53,8 @@ export default function ScrollPhraseSection() {
             className="phrase-word"
             style={{ 
               color: w.color,
-              transform: `translate(${w.vx * progress}px, ${w.vy * progress}px) rotate(${w.r * progress}deg)`,
-              opacity: 1 - (progress * 0.4) // Gradually fades
+              transform: `translate(${w.vx * progress * 0.6}px, ${w.vy * progress * 0.6}px) rotate(${w.r * progress * 0.5}deg)`,
+              opacity: 1 - (progress * 0.5)
             }}
           >
             {w.text}

@@ -9,6 +9,12 @@
   font-size: clamp(2.5rem, 4vw, 4rem);
 }
 
+.contact-info p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 450px;
+}
+
 .contact-form {
   padding: 3rem;
   background: rgba(255, 255, 255, 0.85);

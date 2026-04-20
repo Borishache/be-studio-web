@@ -40,13 +40,138 @@
   position: relative;
 }
 
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--orange);
+  transition: width 0.3s ease;
+}
+
 .nav-links a:hover {
   opacity: 1;
   color: var(--orange);
 }
 
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-cta-mobile {
+  display: none;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--black);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 999;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (max-width: 768px) {
-  .nav-links {
+  .hamburger {
+    display: flex;
+  }
+
+  .header-actions {
     display: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 320px;
+    height: 100vh;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 6rem 2.5rem 3rem;
+    gap: 0;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1050;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.3rem;
+    font-weight: 800;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    opacity: 1;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-cta-mobile {
+    display: block;
+    margin-top: 1.5rem;
+    background: var(--orange);
+    color: var(--white) !important;
+    text-align: center;
+    padding: 1rem 2rem !important;
+    border-radius: 50px;
+    border-bottom: none !important;
+    font-size: 1rem !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 }

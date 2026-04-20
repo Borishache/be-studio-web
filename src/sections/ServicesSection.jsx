@@ -29,13 +29,13 @@ export default function ServicesSection() {
   return (
     <section className="services section-padding" id="servicios">
       <div className="container">
-        <div className="section-header text-center">
+        <div className="section-header text-center scroll-reveal">
           <h2><span className="text-orange">Nuestros</span> Servicios</h2>
           <p>Ofrecemos soluciones integrales y Premium para revolucionar tu posicionamiento digital.</p>
         </div>
         <div className="services-grid">
           {services.map((svc, idx) => (
-            <div key={idx} className="service-card">
+            <div key={idx} className="service-card scroll-reveal">
               <div className="service-icon text-orange">
                 {svc.icon}
               </div>

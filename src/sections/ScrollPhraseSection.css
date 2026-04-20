@@ -1,6 +1,5 @@
 .scroll-phrase-section {
-  min-height: 45vh;
-  margin-top: -3rem;
+  min-height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +9,7 @@
   position: relative;
   z-index: 1;
   padding: 2rem 0;
+  overflow: hidden;
 }
 
 .phrase-container {
@@ -35,9 +35,11 @@
 }
 
 @media (max-width: 768px) {
-  .scroll-phrase-section { min-height: 35vh; margin-top: -1rem; padding: 1rem 0; }
+  .scroll-phrase-section { min-height: 30vh; padding: 1rem 0; }
   .phrase-word {
     font-size: 3rem;
+  }
+  .phrase-container {
     gap: 0.8rem;
   }
 }

@@ -18,11 +18,11 @@ export default function ContactSection() {
   return (
     <section className="contact section-padding" id="contacto">
       <div className="container contact-container">
-        <div className="contact-info">
+        <div className="contact-info scroll-reveal">
           <h2>¿Listo para <span className="text-gradient">conectar?</span></h2>
           <p>Déjanos un mensaje o presiona el botón de WhatsApp para charlar directamente y descubrir cómo podemos hacer crecer tu negocio.</p>
         </div>
-        <div className="contact-form">
+        <div className="contact-form scroll-reveal">
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Nombre</label>

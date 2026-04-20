@@ -8,7 +8,7 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -20,6 +20,7 @@
   background: var(--white);
   border: 1px solid rgba(0,0,0,0.08);
   box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  border-radius: 20px;
 }
 
 .service-card::before {
@@ -33,6 +34,7 @@
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
+  border-radius: 20px 20px 0 0;
 }
 
 .service-card:hover {
@@ -58,4 +60,10 @@
 .service-card p {
   opacity: 0.8;
   font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }

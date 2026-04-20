@@ -130,7 +130,7 @@ p {
 }
 
 .section-padding {
-  padding: 8rem 0;
+  padding: 6rem 0;
 }
 
 a {
@@ -182,3 +182,29 @@ a {
 .delay-100 { animation-delay: 100ms; opacity: 0; }
 .delay-200 { animation-delay: 200ms; opacity: 0; }
 .delay-300 { animation-delay: 300ms; opacity: 0; }
+
+/* ====================== */
+/* Scroll Reveal Animation */
+/* ====================== */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for grid children */
+.services-grid .scroll-reveal:nth-child(2) { transition-delay: 0.1s; }
+.services-grid .scroll-reveal:nth-child(3) { transition-delay: 0.2s; }
+.services-grid .scroll-reveal:nth-child(4) { transition-delay: 0.3s; }
+
+.work-grid .scroll-reveal:nth-child(2) { transition-delay: 0.1s; }
+.work-grid .scroll-reveal:nth-child(3) { transition-delay: 0.2s; }
+.work-grid .scroll-reveal:nth-child(4) { transition-delay: 0.3s; }
+
+.ai-gallery.scroll-reveal { transition-delay: 0.2s; }

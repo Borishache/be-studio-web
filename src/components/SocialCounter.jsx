@@ -1,25 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './SocialCounter.css';
 import { FaHeart, FaArrowUp } from 'react-icons/fa';
 
 export default function SocialCounter() {
   const [metrics, setMetrics] = useState({ likes: 1200, followers: 8500, reach: 25400 });
+  const rafRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Tie numbers to window.scrollY to create infinite scrolling acceleration
-      // Tabular exponential growth illusion
-      const scrollY = window.scrollY;
-      setMetrics({
-        likes: Math.floor(1200 + scrollY * 18.4),
-        followers: Math.floor(8500 + scrollY * 6.2),
-        reach: Math.floor(25400 + scrollY * 145.7)
+      if (rafRef.current) return;
+      rafRef.current = requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        setMetrics({
+          likes: Math.floor(1200 + scrollY * 18.4),
+          followers: Math.floor(8500 + scrollY * 6.2),
+          reach: Math.floor(25400 + scrollY * 145.7)
+        });
+        rafRef.current = null;
       });
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, []);
 
   const formatNumber = (num) => {

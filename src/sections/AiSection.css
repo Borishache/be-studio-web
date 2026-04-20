@@ -81,11 +81,38 @@
   aspect-ratio: 1;
   transform: translateY(0);
   transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
 }
 
 .ai-image-wrap:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.ai-image-zoom-hint {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  color: var(--black);
+  pointer-events: none;
+}
+
+.ai-image-wrap:hover .ai-image-zoom-hint {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .ai-image {

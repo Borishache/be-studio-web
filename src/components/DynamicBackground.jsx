@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './DynamicBackground.css';
 import shape1 from '../assets/shapes/shape-1.png'; // orange
 import shape2 from '../assets/shapes/shape-2.png'; // blue
@@ -7,13 +7,21 @@ import shape4 from '../assets/shapes/shape-4.png'; // lime
 
 export default function DynamicBackground() {
   const [scrollY, setScrollY] = useState(0);
+  const rafRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (rafRef.current) return;
+      rafRef.current = requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+        rafRef.current = null;
+      });
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, []);
 
   const shapesData = [
@@ -29,7 +37,7 @@ export default function DynamicBackground() {
         <img 
           key={`shape-${idx}`}
           src={item.src}
-          alt="decoration shape"
+          alt=""
           className="dyn-shape"
           style={{
             top: item.top,
